@@ -208,9 +208,9 @@ namespace GestionNominasV4
 
         public static void MostrarNomina(Nomina OBJ)
         {
-            Console.WriteLine($"\tNombre: {OBJ.nombre}");
-            Console.WriteLine($"\tApellidos: {OBJ.apellidos}");
-            Console.WriteLine($"\tPuesto: {OBJ.puesto}");
+            Console.WriteLine($"\tNombre: {OBJ.Nombre}");
+            Console.WriteLine($"\tApellidos: {OBJ.Apellidos}");
+            Console.WriteLine($"\tPuesto: {OBJ.Puesto}");
 
             Console.WriteLine($"\n******************************************************\n");
 

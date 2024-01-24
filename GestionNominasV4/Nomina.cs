@@ -28,9 +28,9 @@ namespace GestionNominasV4
 
         // MIEMBROS - CAMPOS - ATRIBUTOS
 
-        public string? nombre;
-        public string? apellidos;
-        public string? puesto;
+        private string? _nombre;
+        private string? _apellidos;
+        private string? _puesto;
 
         private int _horasTrabajadas;
         private float _salarioHora;
@@ -38,8 +38,59 @@ namespace GestionNominasV4
         // Datos Calculados
 
 
+        ////////////////
+        // PROPIEDADES// (Las propiededas siempren empiezan por mayuscula, sin parentesis)
+        ////////////////
 
-        // PROPIEDADES (Las propiededas siempren empiezan por mayuscula, sin parentesis)
+
+
+        /// <summary>
+        /// Nombre del trabajador
+        /// </summary>
+        public string Nombre
+        {
+            get
+            {   // lectura 
+                return _nombre;
+            }
+
+            set
+            {   // Escritura
+                _nombre = value;
+            }
+        }
+
+        /// <summary>
+        /// Apellidos del trabajador
+        /// </summary>
+        public string Apellidos
+        {
+            get
+            {
+                return _apellidos;
+            }
+
+            set 
+            { 
+                _apellidos = value;
+            }
+        }
+
+        /// <summary>
+        /// Puesto del trabajador
+        /// </summary>
+        public string Puesto
+        {
+            get
+            {
+                return _puesto;
+            }
+
+            set
+            {
+                _puesto = value;
+            }
+        }
 
         /// <summary>
         /// Horas trabajadas
@@ -98,18 +149,17 @@ namespace GestionNominasV4
 
 
 
+
+
+
+
+
+
+
        
-
-
-
-
-       
-
-
-       
-
-        // MÉTODOS PRIVADOS
-        
+        /////////////////////
+        // MÉTODOS PRIVADOS//
+        /////////////////////
        
         /// <summary>
         /// Devolucion de las horas Extra realizadas por el trabajador
@@ -148,13 +198,10 @@ namespace GestionNominasV4
 
         }
 
-
         /// <summary>
-        /// Calcuulo del salario base del trabajador
+        /// Calculo del salario base del trabajador
         /// </summary>
         
-
-
         public float SalarioBase()
         {
 
@@ -166,7 +213,10 @@ namespace GestionNominasV4
             return SalBase;
         }
 
-
+        /// <summary>
+        /// Cálculo del Salario los impuestos
+        /// </summary>
+        /// <returns></returns>
 
         public float Impuestos()
         {
@@ -185,7 +235,10 @@ namespace GestionNominasV4
         }
 
 
-
+        /// <summary>
+        /// Cálculo del Salario Bruto del trabajador
+        /// </summary>
+        /// <returns></returns>
 
         public float SalarioBruto()
         {
@@ -200,7 +253,10 @@ namespace GestionNominasV4
             return SalBruto;
         }
 
-
+        /// <summary>
+        /// Cálculo del Salario Neto del trabajador
+        /// </summary>
+        /// <returns></returns>
         public float SalarioNeto()
         {
             // CONSTANTES

@@ -30,13 +30,6 @@
             Interfaz.MostrarNomina(item);
 
 
-
-
-
-
-            
-
-
         }
     }
 }

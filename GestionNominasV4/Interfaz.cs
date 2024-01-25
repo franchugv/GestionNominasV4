@@ -208,6 +208,12 @@ namespace GestionNominasV4
 
         public static void MostrarNomina(Nomina OBJ)
         {
+
+            Console.Clear();
+
+            Console.WriteLine($"\n******************************************************\n");
+
+
             Console.WriteLine($"\tNombre: {OBJ.Nombre}");
             Console.WriteLine($"\tApellidos: {OBJ.Apellidos}");
             Console.WriteLine($"\tPuesto: {OBJ.Puesto}");
@@ -220,7 +226,7 @@ namespace GestionNominasV4
             Console.WriteLine($"\n******************************************************\n");
 
 
-            Console.WriteLine($"\tHoras Extra: {OBJ.HorasExtra()}");
+            Console.WriteLine($"\tHoras Extra: {OBJ.HorasExtras}");
 
             Console.WriteLine($"\tSalario Base: {OBJ.SalarioBase()}");
 
@@ -230,7 +236,9 @@ namespace GestionNominasV4
             Console.WriteLine($"\tSalario Neto: {OBJ.SalarioNeto()}");
             Console.WriteLine($"\tSalario Bruto: {OBJ.SalarioBruto()}");
             Console.WriteLine($"\tSalario Neto: {OBJ.SalarioNeto()}");
-            Console.WriteLine($"\tSalario Extra: {OBJ.SalarioExtra()}");
+            Console.WriteLine($"\tSalario Extra: {OBJ.SalariosExtra}");
+
+            Console.WriteLine($"\n******************************************************\n");
 
         }
 

@@ -44,6 +44,7 @@ namespace GestionNominasV4
 
 
 
+
         /// <summary>
         /// Nombre del trabajador
         /// </summary>
@@ -92,6 +93,13 @@ namespace GestionNominasV4
             }
         }
 
+        public float SalariosNeto
+        {
+            get
+            {
+                return SalarioNeto();
+            }
+        }
         /// <summary>
         /// Horas trabajadas
         /// </summary>
@@ -152,10 +160,47 @@ namespace GestionNominasV4
 
 
 
+        public int HorasExtras
+        {
+            get
+            {
+                return HorasExtra();
+            }
+        }
 
 
 
+        public float SalariosExtra
+        {
+            get
+            {
+                return SalarioExtra();
+            }
+        }
 
+        public float SalariosBase
+        {
+            get
+            {
+                return SalarioBase();
+            }
+        }
+
+        public float SalariosBruto
+        {
+            get
+            {
+                return SalarioBruto();
+            }
+        }
+
+        public float Impuesto
+        {
+            get
+            {
+                return Impuestos();
+            }
+        }
        
         /////////////////////
         // MÉTODOS PRIVADOS//
@@ -165,7 +210,7 @@ namespace GestionNominasV4
         /// Devolucion de las horas Extra realizadas por el trabajador
         /// </summary>
         /// <returns>Horas Extra</returns>
-        public int HorasExtra()
+        private int HorasExtra()
         {
             int horasEx = 0;
 
@@ -181,7 +226,7 @@ namespace GestionNominasV4
         /// Cálculo del Salario Extra del trabajador
         /// </summary>
       
-        public float SalarioExtra()
+        private float SalarioExtra()
         {
 
             // RECURSOS
@@ -213,6 +258,28 @@ namespace GestionNominasV4
             return SalBase;
         }
 
+
+
+
+        /// <summary>
+        /// Cálculo del Salario Bruto del trabajador
+        /// </summary>
+        /// <returns></returns>
+
+        public float SalarioBruto()
+        {
+            // CONSTANTES
+            // RECURSOS LOCALES
+            float SalBruto = 0;
+            // PROCESO
+            SalBruto = SalarioBase() + SalarioExtra();
+
+            // SALIDA - Método
+
+            return SalBruto;
+        }
+
+
         /// <summary>
         /// Cálculo del Salario los impuestos
         /// </summary>
@@ -235,23 +302,7 @@ namespace GestionNominasV4
         }
 
 
-        /// <summary>
-        /// Cálculo del Salario Bruto del trabajador
-        /// </summary>
-        /// <returns></returns>
-
-        public float SalarioBruto()
-        {
-            // CONSTANTES
-            // RECURSOS LOCALES
-            float SalBruto = 0;
-            // PROCESO
-            SalBruto = SalarioBase() + SalarioExtra();
-
-            // SALIDA - Método
-
-            return SalBruto;
-        }
+       
 
         /// <summary>
         /// Cálculo del Salario Neto del trabajador

@@ -35,7 +35,33 @@ namespace GestionNominasV4
         private int _horasTrabajadas;
         private float _salarioHora;
      
-        // Datos Calculados
+
+        // COSNSTRUCTORES - Una forma de inicialización, modificando el constructor por defecto
+
+        public Nomina() 
+        {
+            _nombre = "DESCONOCIDO";
+            _apellidos = "DESCONOCIDO";
+            _puesto = "DESCONOCIDO";
+            _horasTrabajadas = 0;
+            _salarioHora = 0;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="horas">Horas trabajadas</param>
+        /// <param name="salario">Salario por hora</param>
+        public Nomina(int horas, float salario)
+        {
+            _nombre = "DESCONOCIDO";
+            _apellidos = "DESCONOCIDO";
+            _puesto = "DESCONOCIDO";
+            // El valor que se pasa por los parametros se establece en los miembros privados a través de las propiedades
+            HorasTrabajadas = horas;
+            SalarioHora = salario;
+        }
+
 
 
         ////////////////

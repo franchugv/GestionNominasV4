@@ -228,14 +228,14 @@ namespace GestionNominasV4
 
             Console.WriteLine($"\tHoras Extra: {OBJ.HorasExtras}");
 
-            Console.WriteLine($"\tSalario Base: {OBJ.SalarioBase()}");
+            Console.WriteLine($"\tSalario Base: {OBJ.SalariosBase}");
 
             Console.WriteLine($"\n******************************************************\n");
 
 
-            Console.WriteLine($"\tSalario Neto: {OBJ.SalarioNeto()}");
-            Console.WriteLine($"\tSalario Bruto: {OBJ.SalarioBruto()}");
-            Console.WriteLine($"\tSalario Neto: {OBJ.SalarioNeto()}");
+            Console.WriteLine($"\tSalario Neto: {OBJ.SalariosNeto}");
+            Console.WriteLine($"\tSalario Bruto: {OBJ.SalariosBruto}");
+            Console.WriteLine($"\tSalario Neto: {OBJ.SalariosNeto}");
             Console.WriteLine($"\tSalario Extra: {OBJ.SalariosExtra}");
 
             Console.WriteLine($"\n******************************************************\n");
